@@ -11,7 +11,7 @@ public class GUI2 extends JFrame {
         JButton b1, b2, b3, b4, b5;
         JLabel l1, l2, l3, l4, l5, l6, l7, l8;
         JTextField t1, t2;
-//        JScrollPane s=new JScrollPane();
+
 
         b1 = new JButton(""); //add
         b2 = new JButton(""); // search
@@ -96,7 +96,7 @@ public class GUI2 extends JFrame {
         frame.add(l8);
         frame.add(t1);
         frame.add(t2);
-//        frame.add(s); //scroll pane
+
 
         frame.getContentPane().setBackground(Color.darkGray);
         frame.setLayout(null);
