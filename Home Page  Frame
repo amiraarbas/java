@@ -60,7 +60,7 @@ public class GUI2 extends JFrame {
         l5.setForeground(Color.LIGHT_GRAY); //color of search label
 
         b3.setSize(200, 200); // size of delete all button
-        b3.setBounds(400, 400, 100, 100); // location and size of button delete
+        b3.setBounds(400, 400, 100, 100); // location and size of button delete all
         b3.setBackground(Color.BLUE); // color of delete all button
         l6.setBounds(423, 470, 100, 100); // location of delete all label
         l6.setForeground(Color.LIGHT_GRAY); //color of delete all label
