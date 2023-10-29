@@ -5,18 +5,16 @@ import java.awt.*;
 import javax.swing.border.LineBorder;
 
 public class GUI2 extends JFrame {
+     JButton b1, b2, b3, b4, b5;
+     JLabel l1, l2, l3, l4, l5, l6, l7, l8;
+     JTextField t1, t2;
+    GUI2(){
+        b1 = new JButton("Add"); //add
+        b2 = new JButton("Search"); // search
+        b3 = new JButton("Delete All"); // delete all
+        b4 = new JButton("Delete"); // delete
+        b5 = new JButton("Sign Out"); // sign out 
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("home page");
-        JButton b1, b2, b3, b4, b5;
-        JLabel l1, l2, l3, l4, l5, l6, l7, l8;
-        JTextField t1, t2;
-
-        b1 = new JButton(""); //add
-        b2 = new JButton(""); // search
-        b3 = new JButton(""); // delete all
-        b4 = new JButton(""); // delete
-        b5 = new JButton(""); // sign out 
         l1 = new JLabel("Home Page");
         l2 = new JLabel("ID");
         l3 = new JLabel("Name");
@@ -25,18 +23,23 @@ public class GUI2 extends JFrame {
         l6 = new JLabel("Delete All");
         l7 = new JLabel("Delete");
         l8 = new JLabel("sign out");
-        t1 = new JTextField();
-        t2 = new JTextField();
+
+        t1 = new JTextField("  enter  your  id ");
+        t2 = new JTextField("  enter  your  name ");
 
         l1.setBounds(250,5, 200, 200); //home page
-        l1.setFont(new Font("Arial", Font.PLAIN,30)); //size and font for home page 
+        l1.setFont(new Font("Arial", Font.BOLD,30)); //size and font for home page 
         l1.setForeground(Color.BLUE); //color of home page label
 
-        l2.setBounds(65, 120, 100, 100); // id label
+        l2.setBounds(65, 118, 100, 100); // id label
         l2.setForeground(Color.BLUE); //color of id label
+        l2.setFont(new Font("Arial", Font.BOLD,13)); //size and font for id label 
+
 
         l3.setBounds(60, 155, 100, 100); // name label
         l3.setForeground(Color.BLUE); // color of name label
+        l3.setFont(new Font("Arial", Font.BOLD,13)); //size and font for name label 
+
 
         t1.setBounds(100, 150, 500, 35); //text field for id 
         t1.setBackground(Color.LIGHT_GRAY); // color of the background of the textfield
@@ -46,61 +49,59 @@ public class GUI2 extends JFrame {
         t2.setBackground(Color.LIGHT_GRAY); // color of the background of the textfield
         t2.setBorder(new LineBorder(Color.DARK_GRAY)); // color of the textfield's border 
 
-        b1.setSize(200, 200); // size of button add 
-        b1.setBounds(150, 250, 100, 100); // location and size of button add
+        b1.setSize(300, 300); // size of button add 
+        b1.setBounds(155, 250, 120, 120); // location and size of button add
         b1.setBackground(Color.BLUE); // color of button add 
-        l4.setBounds(187, 320, 100, 100); // location of add label
-        l4.setForeground(Color.LIGHT_GRAY); //color of add label
+        b1.setBorder(new LineBorder(new Color(38,38,38)));// color of the border of button add
 
-        b2.setSize(200, 200); //size of search button
-        b2.setBounds(400, 250, 100, 100); // location and size of button search
+        b2.setSize(300, 300); //size of search button
+        b2.setBounds(400, 250, 120, 120); // location and size of button search
         b2.setBackground(Color.BLUE); // color of search button
-        l5.setBounds(430, 320, 100, 100); // location of search label
-        l5.setForeground(Color.LIGHT_GRAY); //color of search label
+        b2.setBorder(new LineBorder(new Color(38,38,38)));// color of the border of button search
 
-        b3.setSize(200, 200); // size of delete all button
-        b3.setBounds(400, 400, 100, 100); // location and size of button delete all
+        b3.setSize(300, 300); // size of delete all button
+        b3.setBounds(400, 400,120, 120); // location and size of button delete all
         b3.setBackground(Color.BLUE); // color of delete all button
-        l6.setBounds(423, 470, 100, 100); // location of delete all label
-        l6.setForeground(Color.LIGHT_GRAY); //color of delete all label
+        b3.setBorder(new LineBorder(new Color(38,38,38)));// color of the border of button delete all
 
-        b4.setSize(200, 200); // size of delete button
-        b4.setBounds(150, 400, 100, 100); //location and size of button delete
+        b4.setSize(300, 300); // size of delete button
+        b4.setBounds(155, 400,120, 120); //location and size of button delete
         b4.setBackground(Color.BLUE); // color of delete button
-        l7.setBounds(187, 470, 100, 100); // location of delete  label
-        l7.setForeground(Color.LIGHT_GRAY); //color of delete  label
-       
+        b4.setBorder(new LineBorder(new Color(38,38,38)));// color of the border of button delte
+
         b5.setSize(80, 35); // size of sign out button
-        b5.setBounds(280, 550, 80, 35); // location and size of button sign out
+        b5.setBounds(290, 550, 100, 35); // location and size of button sign out
         b5.setBackground(Color.GRAY); // color of sign out button
-        l8.setBounds(295,550,100,100);
-        l8.setForeground(Color.LIGHT_GRAY);
+        b5.setBorder(new LineBorder(new Color(38,38,38))); // color of the border of button sign out 
 
+        this.add(b1);
+        this.add(b2);
+        this.add(b3);
+        this.add(b4);
+        this.add(b5);
+        this.add(l1);
+        this.add(l2);
+        this.add(l3);
+        this.add(l4);
+        this.add(l5);
+        this.add(l6);
+        this.add(l7);
+        this.add(l8);
+        this.add(t1);
+        this.add(t2);
         
-
-        frame.add(b1);
-        frame.add(b2);
-        frame.add(b3);
-        frame.add(b4);
-        frame.add(b5);
-        frame.add(l1);
-        frame.add(l2);
-        frame.add(l3);
-        frame.add(l4);
-        frame.add(l5);
-        frame.add(l6);
-        frame.add(l7);
-        frame.add(l8);
-        frame.add(t1);
-        frame.add(t2);
-
-        frame.getContentPane().setBackground(Color.darkGray);
-        frame.setLayout(null);
-        frame.setSize(700, 700);
-        frame.setLocationRelativeTo(null);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
-
+        FlowLayout f=new FlowLayout();
+        this.setLayout(f);
+        this.setLayout(new FlowLayout());
+        this.getContentPane().setBackground(new Color(61,61,61));
+        this.setLayout(null);
+        this.setSize(700, 700);
+        this.setLocationRelativeTo(null);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setVisible(true);
+    }
+    public static void main(String[] args) {
+        GUI2 obj=new GUI2();
     }
 
 }
