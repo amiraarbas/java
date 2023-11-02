@@ -1,0 +1,69 @@
+
+package javaapplication50;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class JavaApplication50 extends JFrame {
+
+    JFrame frame = new JFrame("myFrame");
+    JPanel p1,p2,p3;
+    JButton b1,b2,b3,b4,b5,b6;
+
+    JavaApplication50() {
+        this.setTitle("Assignment 3");
+        this.setSize(600, 700);
+        this.getContentPane().setBackground(Color.WHITE);
+        this.setLayout(null);
+      
+        p1=new JPanel();
+        p2=new JPanel();
+        p3=new JPanel();
+
+        b1=new JButton("save");
+        b2=new JButton("delete");
+        b3=new JButton("cancel");
+        b4=new JButton("ok");
+        b5=new JButton("open");
+        b6=new JButton("close");
+
+        
+        
+        p1.setBounds(0,0, 600,100);
+        p2.setBounds(0,553,600,100);
+        p3.setBounds(0,250,600,100);
+        
+        p1.setBackground(Color.PINK);
+        p2.setBackground(Color.PINK);
+        p3.setBackground(Color.PINK);
+        
+        b1.setBackground(Color.magenta);
+        b2.setBackground(Color.magenta);
+        b3.setBackground(Color.magenta);
+        b4.setBackground(Color.magenta);
+        b5.setBackground(Color.magenta);
+        b6.setBackground(Color.magenta);
+        
+        this.add(p1,BorderLayout.NORTH);
+        this.add(p2,BorderLayout.SOUTH);
+        this.add(p3,BorderLayout.CENTER);
+        
+        p1.add(b1);
+        p1.add(b2);
+        p2.add(b3);
+        p2.add(b4);
+        p3.add(b5);
+        p3.add(b6);
+        
+        this.setLocationRelativeTo(null);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setVisible(true);
+
+    }
+
+    public static void main(String[] args) {
+        JavaApplication50 obj = new JavaApplication50();
+
+    }
+
+}
