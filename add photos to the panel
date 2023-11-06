@@ -1,0 +1,55 @@
+package selectitemes;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class SelectItemes extends JFrame {
+
+    JLabel selectlabel, mylabel1, mylabel2, mylabel3, mylabel4, mylabel5, mylabel6;
+    JPanel panel = new JPanel();
+
+    SelectItemes() {
+        selectlabel = new JLabel("Select Items");
+        mylabel1 = new JLabel(new ImageIcon("d://library (1).jpg"));
+        mylabel2 = new JLabel(new ImageIcon("d://library (1).jpg"));
+        mylabel3 = new JLabel(new ImageIcon("d://library (1).jpg"));
+        mylabel4 = new JLabel(new ImageIcon("d://library (1).jpg"));
+        mylabel5 = new JLabel(new ImageIcon("d://library (1).jpg"));
+        mylabel6 = new JLabel(new ImageIcon("d://library (1).jpg"));
+
+        panel.setSize(500, 500);
+        panel.setBackground(Color.WHITE);
+        panel.setLayout(null);
+
+        selectlabel.setBounds(185, 10, 200, 80);
+        selectlabel.setFont(new Font("Arial", Font.BOLD, 22));
+        selectlabel.setForeground(Color.BLACK);
+
+        mylabel1.setBounds(50, 80, 150, 100);
+        mylabel2.setBounds(300, 80, 150, 100);
+        mylabel3.setBounds(50, 190, 150, 100);
+        mylabel4.setBounds(300, 190, 150, 100);
+        mylabel5.setBounds(50, 300, 150, 100);
+        mylabel6.setBounds(300, 300, 150, 100);
+
+        panel.add(selectlabel);
+        panel.add(mylabel1);
+        panel.add(mylabel2);
+        panel.add(mylabel3);
+        panel.add(mylabel4);
+        panel.add(mylabel5);
+        panel.add(mylabel6);
+
+        this.add(panel);
+        this.setTitle("Add Photos on Panel");
+        this.setSize(500,500);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
+    }
+
+    public static void main(String[] args) {
+            SelectItemes obj = new SelectItemes();
+      
+    }
+}
