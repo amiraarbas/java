@@ -1,0 +1,76 @@
+package assignment6;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class Assignment6 extends JFrame {
+
+    JLabel l1, l2, l3, l4, l5, l6, l7;
+    JTextField t1, t2, t3, t4, t5;
+    JButton b1;
+    JComboBox cb1;
+    JRadioButton rb1, rb2, rb3;
+    ButtonGroup bg;
+
+    Assignment6() {
+        l1 = new JLabel("Title:");
+        l2 = new JLabel("Name:");
+        l3 = new JLabel("Address1:");
+        l4 = new JLabel("Address2:");
+        l5 = new JLabel("City:");
+        l6 = new JLabel("Province:");
+        l7 = new JLabel("Visa#:");
+        t1 = new JTextField();
+        t2 = new JTextField();
+        t3 = new JTextField();
+        t4 = new JTextField();
+        t5 = new JTextField();
+        b1 = new JButton("Ok");
+        bg = new ButtonGroup();
+        rb1 = new JRadioButton("Mr");
+        rb2 = new JRadioButton("Ms");
+        rb3 = new JRadioButton("Mrs");
+        String []city={"Amman","Karak","Aqaba","Balqa","Jarash","Madaba"};
+        cb1=new JComboBox(city);
+        rb1.setBounds(60, 0, 50, 25); // radio button Mr
+        rb2.setBounds(110, 0, 45, 25); // radio button Ms
+        rb3.setBounds(160, 0, 50, 25); // radio button Mrs
+        
+        l1.setBounds(5, 0, 70, 30); //Title
+        l2.setBounds(5, 20, 100, 30); //Name
+        l3.setBounds(5, 70, 100, 30); //Address1
+        l4.setBounds(5, 120, 100, 30); //Address2
+        l5.setBounds(5, 170, 100, 30); //City
+        l6.setBounds(5, 220, 100, 35); //Province
+        l7.setBounds(5, 245, 100, 30); //Visa
+        
+        cb1.setBounds(65, 228, 100, 20);
+        t1.setBounds(5, 45, 270, 25); // text field for Name
+        t2.setBounds(5, 95, 270, 25); // text field for Address1
+        t3.setBounds(5, 145, 270, 25); // text field for Address2
+        t4.setBounds(5, 195, 270, 25); //text field for City
+        t5.setBounds(5, 270, 270, 25); //text field for Visa
+
+        b1.setBounds(5, 300, 60, 30);
+        this.add(cb1);
+        this.add(l1); add(l2); add(l3);add(l4);add(l5);add(l6);add(l7);
+        this.add(t1);add(t2); add(t3);add(t4);add(t5);
+        this.add(b1);
+        bg.add(rb1);
+        bg.add(rb2);
+        bg.add(rb2);
+        this.add(rb1);add(rb2);add(rb3);
+        
+        this.setLayout(null);
+        this.setSize(300, 600);
+        this.setLocationRelativeTo(null);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        Assignment6 obj = new Assignment6();
+
+    }
+
+}
