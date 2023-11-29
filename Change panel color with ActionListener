@@ -1,0 +1,49 @@
+package assignment.pkg5;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.border.*;
+
+public class Assignment5 extends JFrame implements ActionListener {
+
+    JPanel panel1, panel2;
+    JButton button;
+
+    Assignment5() {
+        panel1 = new JPanel();
+        panel2 = new JPanel();
+        button = new JButton("click here");
+        
+        button.setBounds(50, 20, 200, 50);
+        //add the action to button 
+        button.addActionListener(this);
+        
+//        panel1.setBackground(Color.BLUE);
+        panel1.setBorder(new LineBorder(Color.RED));
+//        panel2.setBackground(Color.CYAN);
+        panel2.setBorder(new LineBorder(Color.BLUE));
+        panel1.add(button);
+        
+        this.add(panel1);add(panel2);
+        this.setLayout(new GridLayout(2,1));
+        this.setSize(400, 600);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
+
+    }
+
+    public static void main(String[] args) {
+        Assignment5 obj = new Assignment5();
+    }
+    // overriding 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == button) {
+            panel1.setBackground(Color.yellow);
+            panel2.setBackground(Color.yellow);
+        }
+    }
+
+}
