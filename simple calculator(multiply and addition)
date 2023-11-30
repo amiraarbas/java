@@ -1,0 +1,41 @@
+
+package calculator2;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class calculator2 extends JFrame implements ActionListener {
+private JButton sum, mul;
+private JTextField x, y;
+private JLabel result;
+public calculator2() {
+this.setSize(370, 300);
+this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+this.setLocationRelativeTo (null);
+this.setResizable (false);
+
+this.setLayout(new FlowLayout());
+x = new JTextField(15);
+y= new JTextField(15);
+sum = new JButton("+");
+mul = new JButton("*");
+result = new JLabel("Result");
+sum.addActionListener(this);
+mul.addActionListener(this);
+add(x); add (y); add (sum); add (mul); add(result);
+this.setVisible(true);
+}
+public static void main(String[] args) {
+    new calculator2();
+}
+public void actionPerformed(ActionEvent e) {
+Object obj = e.getSource();
+double first = Double.valueOf(x.getText());
+double second = Double.valueOf(y.getText());
+double sum1 = first + second;
+double mull = first * second;
+if (obj.equals(sum)) { result.setText("Result :" + String.valueOf(sum1));
+} else if (obj.equals(mul)) { result.setText("Result :" + String.valueOf(mull));
+}
+}
+}
